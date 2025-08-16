@@ -16,8 +16,9 @@ app.use(express.json());
 const expenseRoutes = require("./routes/expense2");
 app.use("/api/expenses", expenseRoutes);
 app.use(cors({
-  origin: 'https://expense-wzf1.vercel.app/',  // frontend ka URL
-  credentials: true,                 // agar cookies ya auth headers use kar rahe ho
+  origin: ["https://expense-wzf1.vercel.app"],
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true             // agar cookies ya auth headers use kar rahe ho
 }));
 
 // Connect to DB
