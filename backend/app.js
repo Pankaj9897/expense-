@@ -13,6 +13,7 @@ const authRoutes = require('./routes/auth');
 
 
 app.use(express.json());
+app.use(cors());
 const expenseRoutes = require("./routes/expense2");
 app.use("/api/expenses", expenseRoutes);
 app.use(cors({
