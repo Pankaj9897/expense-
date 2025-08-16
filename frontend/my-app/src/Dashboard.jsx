@@ -11,7 +11,7 @@ export default function Dashboard() {
   const fetchExpenses = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.get("http://localhost:5000/api/expenses", {
+      const res = await axios.get("https://expense-3-ngm1.onrender.com/api/expenses", {
         headers: { Authorization: `Bearer ${token}` }
       });
       setExpenses(res.data);
