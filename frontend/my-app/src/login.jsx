@@ -13,7 +13,7 @@ export default function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://expense-3-ngm1.onrender.com/login", {
+      const res = await axios.post("https://expense-3-ngm1.onrender.com/api/auth/login", {
         email,
         password
       });
