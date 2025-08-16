@@ -26,7 +26,7 @@ export default function Dashboard() {
     try {
       const token = localStorage.getItem("token");
       await axios.post(
-        "http://localhost:5000/api/expenses",
+        "https://expense-3-ngm1.onrender.com/api/expenses",
         { title, amount, category },
         { headers: { Authorization: `Bearer ${token}` } }
       );
